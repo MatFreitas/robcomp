@@ -4,7 +4,9 @@ Copie e cole os comandos a seguir no terminal
 para abrir o terminal, use Crtl+ Alt + t
 
     curl -s https://packagecloud.io/install/repositories/github/git-lfs/script.deb.sh | sudo bash
+
     sudo apt-get install git-lfs
+    
     git lfs install
 
 
@@ -12,4 +14,7 @@ para abrir o terminal, use Crtl+ Alt + t
 
 Copie e cole os comandos a seguir no prompt
 
-    conda install -c conda-force git-lfs
+    conda install -c conda-force git-lfs]
+
+    git lfs install
+
