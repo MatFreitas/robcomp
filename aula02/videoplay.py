@@ -1,3 +1,6 @@
+#!/usr/bin/python
+# -*- coding: utf-8 -*-
+
 import cv2
 
 cap = cv2.VideoCapture('hall_box_battery_1024.mp4')
@@ -23,3 +26,4 @@ while(True):
 # When everything done, release the capture
 cap.release()
 cv2.destroyAllWindows()
+
