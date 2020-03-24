@@ -9,6 +9,7 @@ import numpy as np
 from matplotlib import pyplot as plt
 import time
 from math import atan, degrees
+import math
 import auxiliar as aux
 
 # If you want to open a video, just change v2.VideoCapture(0) from 0 to the filename, just like below
@@ -161,7 +162,9 @@ while(True):
     if lista_cm != [] and len(lista_cm) != 1 and (lista_cm[1][0] - lista_cm[0][0]) != 0:
         angulo= degrees(atan((-1)*(lista_cm[1][1] - lista_cm[0][1])/(lista_cm[1][0] - lista_cm[0][0])))
         cv2.putText(contornos_img,'angulo: {:05f}'.format(angulo),(0,50), font, 1,(255,255,255),2,cv2.LINE_AA)
-        
+        distanciaPixel = math.sqrt((lista_cm[1][1] - lista_cm[0][1])**2 + (lista_cm[1][0] - lista_cm[0][0])**2)
+        distancia = (14*300)/distanciaPixel
+        cv2.putText(contornos_img,'distancia: {:05f}'.format(distancia),(0,100), font, 1,(255,255,255),2,cv2.LINE_AA)
 
     
     # Display the resulting frame
